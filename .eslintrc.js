@@ -23,7 +23,14 @@ module.exports = {
   rules: {
     // allow async-await
     'generator-star-spacing': 'off',
+    // allow paren-less arrow functions
+    'arrow-parens': 0,
     // allow debugger during development
-    'no-debugger': process.env.NODE_ENV === 'production' ? 'error' : 'off'
+    'no-debugger': process.env.NODE_ENV === 'production' ? 2 : 0,
+    "space-before-function-paren": ["error", {
+        "anonymous": "always",
+        "named": "never",
+        "asyncArrow": "always"
+    }]
   }
 }
